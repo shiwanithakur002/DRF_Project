@@ -1,0 +1,28 @@
+### Get Products
+GET http://127.0.0.1:8000/products/
+Content-Type: application/json
+
+###
+
+### Get Token
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "test"
+}
+
+###
+
+### Create Product (Authorized)
+POST http://127.0.0.1:8000/products/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2NDIzODExLCJpYXQiOjE3NDY0MjM1MTEsImp0aSI6IjUwN2U3N2FkODFjMjQ0ZmI4NzdkYjA4MzdlMDk5ODhkIiwidXNlcl9pZCI6MX0.kt6RsRMQ4Y7YMcWkJn-MMN08h7mkJ-zCGAkDJtjwUos
+
+{
+  "name": "Washing Machine latest",
+  "price": 450.00,
+  "stock": 11,
+  "description": "An amazing new Washing Machine"
+}
